@@ -22,3 +22,15 @@ class Solution:
         if(curr_len > max_substr):
             return curr_len
         return max_substr
+# Optimized Solution:
+'''
+charSet = set()
+l, res = 0, 0
+for r in range(len(s)):
+    while s[r] in charSet:
+        charSet.remove(s[l])
+        l += 1
+    charSet.add(s[r]
+    res = max(res, r - 1 + 1)
+return res
+'''
